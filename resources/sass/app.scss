@@ -1,1 +1,18 @@
-//
+// Bootstrap
+@import "~bootstrap/scss/bootstrap.scss";
+
+// Fontawesome
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+
+// Partials
+@import "Partials/_index.scss";
+
+
+// Page settings
+body {
+    background-color: rgb(180, 173, 180);
+    font-family: 'Lato', sans-serif;
+}
