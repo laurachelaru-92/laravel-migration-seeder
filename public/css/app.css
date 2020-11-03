@@ -17081,6 +17081,34 @@ readers do not read off random characters that represent icons */
   right: 10px;
 }
 
+#authors-index-wrapper {
+  padding: 30px 0;
+}
+
+#authors-index-wrapper h1 {
+  text-align: center;
+  padding: 20px;
+  font-weight: 700;
+}
+
+#authors-index-wrapper .list-group-item {
+  position: relative;
+}
+
+#authors-index-wrapper .list-group-item .fa-edit,
+#authors-index-wrapper .list-group-item .fa-trash-alt {
+  position: absolute;
+  bottom: 10px;
+}
+
+#authors-index-wrapper .list-group-item .fa-edit {
+  right: 30px;
+}
+
+#authors-index-wrapper .list-group-item .fa-trash-alt {
+  right: 10px;
+}
+
 body {
   background-color: #b4adb4;
   font-family: "Lato", sans-serif;
