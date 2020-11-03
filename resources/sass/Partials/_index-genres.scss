@@ -1,0 +1,27 @@
+#genres-index-wrapper {
+    padding: 30px;
+    width: 60%;
+    margin: auto;
+
+    h1 {
+        text-align: center;
+        padding: 20px;
+        font-weight: 700;
+    }
+
+    table tbody {
+        background-color: #fff;
+        
+        .edit {
+            width: 150px;
+        }
+    
+        .delete {
+            width: 150px;
+        }
+    
+        .fa-trash-alt {
+            color: red;
+        }
+    }
+}

@@ -17,3 +17,4 @@ Route::resource("comics", "ComicController");
 
 Route::resource("authors", "AuthorController");
 
+Route::resource("genres", "GenreController");
