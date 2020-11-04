@@ -6,17 +6,29 @@
 
 @section('page-content')
     <div id="authors-index-wrapper">
-        <h1>The authors</h1>
         <div class="container">
-            <ul class="list-group">
-                @foreach ($authors as $author)
-                    <li class="list-group-item">
-                        <a href="{{route('authors.show', $author->id)}}"><p class="card-text">{{$author->name}} {{$author->lastname}}</p></a>
-                        <a href="{{route('authors.edit', $author->id)}}"><i class="far fa-edit"></i></a>
-                        <a href="{{route('authors.destroy', $author->id)}}"><i class="far fa-trash-alt"></i></a>
-                    </li>
-                @endforeach
-            </ul>        
+            <h1>The authors</h1>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col" class="name">Name</th>
+                        <th scope="col" class="actions">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($authors as $author)
+                        <tr>
+                            <td>
+                                <a href="{{route('authors.show', $author->id)}}"><p class="card-text">{{$author->name}} {{$author->lastname}}</p></a>
+                            </td>
+                            <td>
+                                <a href="{{route('authors.edit', $author->id)}}"><i class="far fa-edit"></i></a>
+                                <a href="{{route('authors.destroy', $author->id)}}"><i class="far fa-trash-alt"></i></a>
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
         </div>
     </div>
 @endsection

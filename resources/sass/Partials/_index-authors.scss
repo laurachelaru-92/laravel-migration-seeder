@@ -7,20 +7,31 @@
         font-weight: 700;
     }
 
-    .list-group-item {
-        position: relative;
+    table {
+        width: 70%;
+        margin: auto;
 
-        .fa-edit, .fa-trash-alt {
-            position: absolute;
-            bottom: 10px;
+        thead {
+
+            .name {
+                width: 80%;
+            }
+
+            .actions {
+                width: 20%;
+            }
         }
 
-        .fa-edit {
-            right: 30px;
-        }
+        tbody {
+            background-color: #fff;
 
-        .fa-trash-alt {
-            right: 10px;
+            .fa-edit {
+                margin-right: 10px;
+            }
+
+            .fa-trash-alt {
+                color: rgb(190, 23, 23);
+            }
         }
     }
 }

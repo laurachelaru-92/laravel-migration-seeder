@@ -1,7 +1,5 @@
 #genres-index-wrapper {
-    padding: 30px;
-    width: 60%;
-    margin: auto;
+    padding: 30px 0;
 
     h1 {
         text-align: center;
@@ -9,19 +7,31 @@
         font-weight: 700;
     }
 
-    table tbody {
-        background-color: #fff;
+    table {
+        width: 70%;
+        margin: auto;
+
+        thead {
+
+            .genre {
+                width: 80%;
+            }
+
+            .actions {
+                width: 20%;
+            }
+        }
         
-        .edit {
-            width: 150px;
-        }
-    
-        .delete {
-            width: 150px;
-        }
-    
-        .fa-trash-alt {
-            color: red;
+        tbody {
+            background-color: #fff;
+        
+            .fa-edit {
+                margin-right: 10px;
+            }
+        
+            .fa-trash-alt {
+                color: rgb(190, 23, 23);
+            }
         }
     }
 }

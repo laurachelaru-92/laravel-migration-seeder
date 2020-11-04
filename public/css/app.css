@@ -17091,28 +17091,33 @@ readers do not read off random characters that represent icons */
   font-weight: 700;
 }
 
-#authors-index-wrapper .list-group-item {
-  position: relative;
+#authors-index-wrapper table {
+  width: 70%;
+  margin: auto;
 }
 
-#authors-index-wrapper .list-group-item .fa-edit,
-#authors-index-wrapper .list-group-item .fa-trash-alt {
-  position: absolute;
-  bottom: 10px;
+#authors-index-wrapper table thead .name {
+  width: 80%;
 }
 
-#authors-index-wrapper .list-group-item .fa-edit {
-  right: 30px;
+#authors-index-wrapper table thead .actions {
+  width: 20%;
 }
 
-#authors-index-wrapper .list-group-item .fa-trash-alt {
-  right: 10px;
+#authors-index-wrapper table tbody {
+  background-color: #fff;
+}
+
+#authors-index-wrapper table tbody .fa-edit {
+  margin-right: 10px;
+}
+
+#authors-index-wrapper table tbody .fa-trash-alt {
+  color: #be1717;
 }
 
 #genres-index-wrapper {
-  padding: 30px;
-  width: 60%;
-  margin: auto;
+  padding: 30px 0;
 }
 
 #genres-index-wrapper h1 {
@@ -17121,20 +17126,29 @@ readers do not read off random characters that represent icons */
   font-weight: 700;
 }
 
+#genres-index-wrapper table {
+  width: 70%;
+  margin: auto;
+}
+
+#genres-index-wrapper table thead .genre {
+  width: 80%;
+}
+
+#genres-index-wrapper table thead .actions {
+  width: 20%;
+}
+
 #genres-index-wrapper table tbody {
   background-color: #fff;
 }
 
-#genres-index-wrapper table tbody .edit {
-  width: 150px;
-}
-
-#genres-index-wrapper table tbody .delete {
-  width: 150px;
+#genres-index-wrapper table tbody .fa-edit {
+  margin-right: 10px;
 }
 
 #genres-index-wrapper table tbody .fa-trash-alt {
-  color: red;
+  color: #be1717;
 }
 
 #edit-genres-wrapper {
