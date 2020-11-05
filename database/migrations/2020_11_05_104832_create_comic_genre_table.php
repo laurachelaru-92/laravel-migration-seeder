@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAuthorsInfoTable extends Migration
+class CreateComicGenreTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class CreateAuthorsInfoTable extends Migration
      */
     public function up()
     {
-        Schema::create('authors_info', function (Blueprint $table) {
-            $table->foreignId('author_id')->constrained();
-            $table->string("nationality", 60);
-            $table->boolean("alive")->default(1);
-            $table->string("image");
+        Schema::create('comic_genre', function (Blueprint $table) {
+            $table->foreignId('comic_id')->constrained('comics');
+            $table->foreignId('genre_id')->constrained('genres');
         });
     }
 
@@ -28,6 +26,6 @@ class CreateAuthorsInfoTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('authors_info');
+        Schema::dropIfExists('comic_genre');
     }
 }

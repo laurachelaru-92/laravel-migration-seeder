@@ -15,16 +15,16 @@ class CreateComicsTable extends Migration
     {
         Schema::create('comics', function (Blueprint $table) {
             $table->id();
+            $table->foreignId("author_id")->constrained();
             $table->string("title", 30);
             $table->string("original_title", 30)->nullable();
-            $table->string("author", 40);
             $table->smallInteger("pages");
             $table->year("release");
             $table->float("price", 6, 2);
             $table->string("reading_direction");
             $table->string("cover")->default("https://picsum.photos/200/300");
             $table->timestamps();
-        });
+            });
     }
 
     /**
@@ -34,6 +34,6 @@ class CreateComicsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('comics');
+        Schema::drop('comics');
     }
 }

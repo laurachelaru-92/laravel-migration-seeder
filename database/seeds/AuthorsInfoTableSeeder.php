@@ -15,11 +15,23 @@ class AuthorsInfoTableSeeder extends Seeder
     public function run(Faker $faker)
     {
         $authors = Author::all();
-
+        
         foreach($authors as $author) {
-            $newAuthorsInfo = new AuthorsInfo;
-            $newAuthorsInfo->author_id = DB::table('authors')->inRandomOrder('id')->first();
 
+            if($author->info == NULL) {
+                $newAuthorsInfo = new AuthorsInfo;
+                $newAuthorsInfo->author_id = $author->id;
+                $newAuthorsInfo->nationality = $faker->country;
+                if(rand(0,1) == 1) {
+                    $newAuthorsInfo->alive = 1;
+                    $newAuthorsInfo->image = $faker->imageUrl(150, 200);
+                } else {
+                    $newAuthorsInfo->alive = 0;
+                    $newAuthorsInfo->image = "https://centennialinc.com/wp-content/uploads/sites/2/2018/09/tombstone.jpg";
+                }
+                $newAuthorsInfo->save();
+            }
         }
     }
+
 }

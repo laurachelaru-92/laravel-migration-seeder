@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Comic;
+use App\Author;
 
 class ComicController extends Controller
 {
@@ -15,8 +16,9 @@ class ComicController extends Controller
     public function index()
     {
         $comics = Comic::all();
+        $authors = Author::all();
 
-        return view("comics.index", compact("comics"));
+        return view("comics.index", ["comics" => $comics, "authors" => $authors]);
     }
 
     /**
@@ -26,7 +28,7 @@ class ComicController extends Controller
      */
     public function create()
     {
-        //
+        return view('comics.create');
     }
 
     /**
@@ -37,7 +39,10 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        $newComic = new Comic;
+        $newComic->fill($data);
     }
 
     /**
